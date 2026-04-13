@@ -1,0 +1,549 @@
+/* ========================================
+   PAPA'S Restaurant - Animations
+   تأثيرات حركية احترافية
+======================================== */
+
+/* ====== تأثيرات الظهور التدريجي ====== */
+.fade-in-up {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInUp 0.8s ease forwards;
+}
+
+.fade-in-up.delay-1 {
+    animation-delay: 0.2s;
+}
+
+.fade-in-up.delay-2 {
+    animation-delay: 0.4s;
+}
+
+.fade-in-up.delay-3 {
+    animation-delay: 0.6s;
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ====== تأثيرات الظهور من اليسار ====== */
+.slide-in-left {
+    opacity: 0;
+    transform: translateX(-50px);
+    animation: slideInLeft 0.8s ease forwards;
+}
+
+@keyframes slideInLeft {
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* ====== تأثيرات الظهور من اليمين ====== */
+.slide-in-right {
+    opacity: 0;
+    transform: translateX(50px);
+    animation: slideInRight 0.8s ease forwards;
+}
+
+@keyframes slideInRight {
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* ====== تأثير الزوم ====== */
+.zoom-in {
+    opacity: 0;
+    transform: scale(0.8);
+    animation: zoomIn 0.6s ease forwards;
+}
+
+@keyframes zoomIn {
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* ====== تأثير الدوران ====== */
+.rotate-in {
+    opacity: 0;
+    transform: rotate(-180deg) scale(0.5);
+    animation: rotateIn 0.8s ease forwards;
+}
+
+@keyframes rotateIn {
+    to {
+        opacity: 1;
+        transform: rotate(0) scale(1);
+    }
+}
+
+/* ====== تأثير الاهتزاز ====== */
+.shake {
+    animation: shake 0.5s ease;
+}
+
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-10px); }
+    75% { transform: translateX(10px); }
+}
+
+/* ====== تأثير النبض ====== */
+.pulse {
+    animation: pulse 2s ease infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+}
+
+/* ====== تأثير التوهج ====== */
+.glow {
+    animation: glow 2s ease-in-out infinite;
+}
+
+@keyframes glow {
+    0%, 100% {
+        box-shadow: 0 0 5px rgba(193, 157, 96, 0.5);
+    }
+    50% {
+        box-shadow: 0 0 20px rgba(193, 157, 96, 0.8),
+                    0 0 30px rgba(193, 157, 96, 0.6);
+    }
+}
+
+/* ====== تأثير الارتفاع ====== */
+.float {
+    animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+}
+
+/* ====== تأثير التلاشي ====== */
+.fade-in {
+    opacity: 0;
+    animation: fadeIn 1s ease forwards;
+}
+
+@keyframes fadeIn {
+    to { opacity: 1; }
+}
+
+.fade-out {
+    animation: fadeOut 0.5s ease forwards;
+}
+
+@keyframes fadeOut {
+    to { opacity: 0; }
+}
+
+/* ====== تأثيرات التمرير Scroll Reveal ====== */
+[data-scroll] {
+    opacity: 0;
+    transition: all 0.8s ease;
+}
+
+[data-scroll="fade-up"] {
+    transform: translateY(50px);
+}
+
+[data-scroll="fade-down"] {
+    transform: translateY(-50px);
+}
+
+[data-scroll="fade-left"] {
+    transform: translateX(-50px);
+}
+
+[data-scroll="fade-right"] {
+    transform: translateX(50px);
+}
+
+[data-scroll="zoom"] {
+    transform: scale(0.9);
+}
+
+[data-scroll].revealed {
+    opacity: 1;
+    transform: translate(0) scale(1);
+}
+
+/* ====== تأثيرات الأزرار ====== */
+.btn-ripple {
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-ripple::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.5);
+    transform: translate(-50%, -50%);
+    transition: width 0.6s, height 0.6s;
+}
+
+.btn-ripple:active::before {
+    width: 300px;
+    height: 300px;
+}
+
+/* ====== تأثير الخط المتحرك ====== */
+.animated-underline {
+    position: relative;
+    display: inline-block;
+}
+
+.animated-underline::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 3px;
+    background: var(--primary-color);
+    transition: width 0.4s ease;
+}
+
+.animated-underline:hover::after {
+    width: 100%;
+}
+
+/* ====== تأثير الكتابة ====== */
+.typing-effect {
+    overflow: hidden;
+    border-right: 3px solid var(--primary-color);
+    white-space: nowrap;
+    animation: typing 3.5s steps(40) 1s forwards,
+               blink 0.75s step-end infinite;
+}
+
+@keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+@keyframes blink {
+    50% { border-color: transparent; }
+}
+
+/* ====== تأثير التموج في الخلفية ====== */
+.wave-background {
+    position: relative;
+    overflow: hidden;
+}
+
+.wave-background::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 200%;
+    height: 100px;
+    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 120'%3E%3Cpath d='M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z' fill='%23c19d60' fill-opacity='0.2'/%3E%3C/svg%3E");
+    background-size: 50% 100px;
+    animation: wave 10s linear infinite;
+}
+
+@keyframes wave {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
+
+/* ====== تأثير الجزيئات ====== */
+.particle {
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    background: var(--primary-color);
+    border-radius: 50%;
+    opacity: 0;
+    animation: particle 4s ease-in-out infinite;
+}
+
+@keyframes particle {
+    0% {
+        opacity: 0;
+        transform: translateY(0) translateX(0);
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(-100px) translateX(50px);
+    }
+}
+
+/* ====== تأثير التدرج المتحرك ====== */
+.gradient-shift {
+    background: linear-gradient(
+        45deg,
+        var(--primary-color),
+        var(--primary-dark),
+        var(--primary-color)
+    );
+    background-size: 200% 200%;
+    animation: gradientShift 3s ease infinite;
+}
+
+@keyframes gradientShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* ====== تأثير البطاقة المقلوبة ====== */
+.flip-card {
+    perspective: 1000px;
+}
+
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+}
+
+.flip-card-back {
+    transform: rotateY(180deg);
+}
+
+/* ====== تأثير التحميل ====== */
+.loading-dots::after {
+    content: '';
+    animation: loadingDots 1.5s infinite;
+}
+
+@keyframes loadingDots {
+    0%, 20% { content: '.'; }
+    40% { content: '..'; }
+    60%, 100% { content: '...'; }
+}
+
+/* ====== تأثير الهيكل العظمي Loading Skeleton ====== */
+.skeleton {
+    background: linear-gradient(
+        90deg,
+        #f0f0f0 25%,
+        #e0e0e0 50%,
+        #f0f0f0 75%
+    );
+    background-size: 200% 100%;
+    animation: skeleton 1.5s ease-in-out infinite;
+}
+
+@keyframes skeleton {
+    0% { background-position: 200% 0; }
+    100% { background-position: -200% 0; }
+}
+
+/* ====== تأثير الاهتزاز عند الخطأ ====== */
+.error-shake {
+    animation: errorShake 0.5s ease;
+}
+
+@keyframes errorShake {
+    0%, 100% { transform: translateX(0); }
+    10%, 30%, 50%, 70%, 90% { transform: translateX(-10px); }
+    20%, 40%, 60%, 80% { transform: translateX(10px); }
+}
+
+/* ====== تأثير النجاح ====== */
+.success-bounce {
+    animation: successBounce 0.6s ease;
+}
+
+@keyframes successBounce {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+}
+
+/* ====== تأثير شريط التقدم ====== */
+.progress-bar {
+    position: relative;
+    overflow: hidden;
+}
+
+.progress-bar::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(255, 255, 255, 0.3),
+        transparent
+    );
+    animation: progressShine 2s infinite;
+}
+
+@keyframes progressShine {
+    to { left: 100%; }
+}
+
+/* ====== تأثيرات الانتقال بين الصفحات ====== */
+.page-transition-enter {
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+.page-transition-enter-active {
+    opacity: 1;
+    transform: translateY(0);
+    transition: all 0.5s ease;
+}
+
+.page-transition-exit {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.page-transition-exit-active {
+    opacity: 0;
+    transform: translateY(-20px);
+    transition: all 0.5s ease;
+}
+
+/* ====== تأثيرات عند التمرير Parallax ====== */
+.parallax {
+    transition: transform 0.1s ease-out;
+}
+
+/* ====== تأثير الضوء المتحرك Spotlight ====== */
+.spotlight {
+    position: relative;
+    overflow: hidden;
+}
+
+.spotlight::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(
+        circle,
+        rgba(255, 255, 255, 0.1) 0%,
+        transparent 50%
+    );
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+}
+
+.spotlight:hover::before {
+    opacity: 1;
+}
+
+/* ====== تأثير النص المتوهج ====== */
+.glowing-text {
+    animation: glowingText 2s ease-in-out infinite;
+}
+
+@keyframes glowingText {
+    0%, 100% {
+        text-shadow: 0 0 5px rgba(193, 157, 96, 0.5),
+                     0 0 10px rgba(193, 157, 96, 0.3);
+    }
+    50% {
+        text-shadow: 0 0 20px rgba(193, 157, 96, 0.8),
+                     0 0 30px rgba(193, 157, 96, 0.6),
+                     0 0 40px rgba(193, 157, 96, 0.4);
+    }
+}
+
+/* ====== تأثيرات الظهور المتسلسل ====== */
+.stagger-animation > * {
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+.stagger-animation.active > *:nth-child(1) {
+    animation: fadeInUp 0.5s ease 0.1s forwards;
+}
+
+.stagger-animation.active > *:nth-child(2) {
+    animation: fadeInUp 0.5s ease 0.2s forwards;
+}
+
+.stagger-animation.active > *:nth-child(3) {
+    animation: fadeInUp 0.5s ease 0.3s forwards;
+}
+
+.stagger-animation.active > *:nth-child(4) {
+    animation: fadeInUp 0.5s ease 0.4s forwards;
+}
+
+.stagger-animation.active > *:nth-child(5) {
+    animation: fadeInUp 0.5s ease 0.5s forwards;
+}
+
+/* ====== تحسينات الأداء ====== */
+.will-change-transform {
+    will-change: transform;
+}
+
+.will-change-opacity {
+    will-change: opacity;
+}
+
+/* تفعيل تسريع GPU */
+.gpu-accelerated {
+    transform: translateZ(0);
+    backface-visibility: hidden;
+    perspective: 1000px;
+}
+
+/* ====== تأثيرات خاصة للأجهزة اللمسية ====== */
+@media (hover: none) {
+    /* تعطيل بعض التأثيرات على الأجهزة اللمسية لتحسين الأداء */
+    .parallax,
+    .spotlight::before {
+        display: none;
+    }
+}
+
+/* ====== تقليل الحركة للمستخدمين الذين يفضلون ذلك ====== */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}

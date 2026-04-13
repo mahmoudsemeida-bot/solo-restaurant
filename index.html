@@ -1,0 +1,752 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Solo Restaurant Hurghada - Fine Dining & Live Entertainment. Book your table now!">
+    <meta name="keywords" content="restaurant hurghada, fine dining, live music, camel steak, seafood">
+    
+    <!-- Open Graph للسوشيال ميديا -->
+    <meta property="og:title" content="Solo Restaurant - Hurghada">
+    <meta property="og:description" content="Experience world-class dining with live entertainment">
+    <meta property="og:image" content="./images/og-image.jpg">
+    
+    <title>Solo Restaurant | Fine Dining & Live Entertainment in Hurghada</title>
+    
+    <!-- خطوط Google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- أيقونات FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- ملفات CSS -->
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/animations.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="./images/favicon.png">
+</head>
+<body>
+    
+    <!-- ====== شريط اللغات العلوي ====== -->
+    <div class="top-bar">
+        <div class="container">
+            <div class="top-bar-content">
+                <div class="contact-info">
+                    <a href="tel:+201067501353" class="top-link">
+                        <i class="fas fa-phone"></i>
+                        <span>+20 10 6750 1353</span>
+                    </a>
+                    <a href="https://maps.google.com/?q=Papa's+Restaurant+Hurghada" target="_blank" class="top-link">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span data-translate="location">Hurghada City Center</span>
+                    </a>
+                </div>
+                <div class="language-switcher">
+                    <button class="lang-btn active" data-lang="en">EN</button>
+                    <button class="lang-btn" data-lang="ar">AR</button>
+                    <button class="lang-btn" data-lang="fr">FR</button>
+                    <button class="lang-btn" data-lang="it">IT</button>
+                    <button class="lang-btn" data-lang="ru">RU</button>
+                    <button class="lang-btn" data-lang="hi">HI</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ====== شريط التنقل ====== -->
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <div class="nav-wrapper">
+                <!-- الشعار -->
+                <div class="logo">
+                    <h1>PAPA'S</h1>
+                    <span class="logo-subtitle" data-translate="logoSubtitle">Restaurant & Lounge</span>
+                </div>
+
+                <!-- قائمة التنقل -->
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="#home" class="nav-link active" data-translate="navHome">Home</a></li>
+                    <li><a href="#about" class="nav-link" data-translate="navAbout">About</a></li>
+                    <li><a href="#menu" class="nav-link" data-translate="navMenu">Menu</a></li>
+                    <li><a href="#experience" class="nav-link" data-translate="navExperience">Live Experience</a></li>
+                    <li><a href="#gallery" class="nav-link" data-translate="navGallery">Gallery</a></li>
+                    <li><a href="#reviews" class="nav-link" data-translate="navReviews">Reviews</a></li>
+                    <li><a href="#contact" class="nav-link" data-translate="navContact">Contact</a></li>
+                </ul>
+
+                <!-- زر الحجز -->
+                <button class="btn-primary reserve-btn" id="openBookingModal" data-translate="btnBookTable">
+                    <i class="fas fa-calendar-check"></i> Book a Table
+                </button>
+
+                <!-- زر القائمة للموبايل -->
+                <button class="mobile-menu-toggle" id="mobileMenuToggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ====== القسم الرئيسي Hero ====== -->
+    <section class="hero" id="home" style='background-image: url("./images/hero-bg.jpg");'>
+        <div class="hero-overlay"></div>
+        <video class="hero-video" autoplay muted loop playsinline>
+            <source src="./images/hero-video.mp4" type="video/mp4">
+        </video>
+        
+        <div class="hero-content">
+            <div class="container">
+                <div class="hero-text">
+                    <h1 class="hero-title fade-in-up">
+                        <span data-translate="heroTitle1">Experience Fine Dining</span><br>
+                        <span class="highlight" data-translate="heroTitle2">& Live Entertainment</span>
+                    </h1>
+                    <p class="hero-subtitle fade-in-up delay-1" data-translate="heroSubtitle">
+                        Where World Cuisine Meets Unforgettable Moments in Hurghada
+                    </p>
+                    <div class="hero-buttons fade-in-up delay-2">
+                        <button class="btn-primary btn-large" id="heroBookBtn" data-translate="btnBookNow">
+                            <i class="fas fa-utensils"></i> Book Your Table
+                        </button>
+                        <a href="#menu" class="btn-secondary btn-large" data-translate="btnViewMenu">
+                            <i class="fas fa-book-open"></i> View Menu
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- مؤشر السكرول -->
+        <div class="scroll-indicator">
+            <div class="mouse"></div>
+        </div>
+    </section>
+
+    <!-- ====== قسم النقاط المميزة ====== -->
+    <section class="features">
+        <div class="container">
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-music"></i>
+                    </div>
+                    <h3 data-translate="feature1Title">Live Music</h3>
+                    <p data-translate="feature1Desc">Enjoy rock, blues & world music performances daily</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-fire"></i>
+                    </div>
+                    <h3 data-translate="feature2Title">Hot Stone Steaks</h3>
+                    <p data-translate="feature2Desc">Cook your premium steak to perfection on hot lava stone</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-globe"></i>
+                    </div>
+                    <h3 data-translate="feature3Title">World Cuisine</h3>
+                    <p data-translate="feature3Desc">Italian, French, Indian, Mediterranean & Egyptian dishes</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-cocktail"></i>
+                    </div>
+                    <h3 data-translate="feature4Title">Premium Lounge</h3>
+                    <p data-translate="feature4Desc">Signature cocktails & relaxing atmosphere until 2 AM</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ====== قسم عن المطعم ====== -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle" data-translate="aboutSubtitle">Our Story</span>
+                <h2 class="section-title" data-translate="aboutTitle">Welcome to PAPA'S</h2>
+                <div class="title-decoration">
+                    <span class="line"></span>
+                    <i class="fas fa-star"></i>
+                    <span class="line"></span>
+                </div>
+            </div>
+
+            <div class="about-content">
+                <div class="about-image">
+                    <img src="./images/about-restaurant.jpg" alt="PAPA'S Restaurant Interior">
+                    <div class="about-badge">
+                        <i class="fas fa-award"></i>
+                        <span>4.7★</span>
+                    </div>
+                </div>
+                <div class="about-text">
+                    <p class="lead" data-translate="aboutText1">
+                        Located in the heart of Hurghada City Center, PAPA'S Restaurant & Lounge offers more than just a meal – we create unforgettable experiences.
+                    </p>
+                    <p data-translate="aboutText2">
+                        Since our opening, we've been dedicated to bringing together the finest world cuisines with exceptional live entertainment. Our chefs prepare each dish with premium ingredients, while our musicians create the perfect ambiance for your evening.
+                    </p>
+                    <ul class="about-features">
+                        <li><i class="fas fa-check-circle"></i> <span data-translate="aboutFeature1">Fresh, locally-sourced ingredients</span></li>
+                        <li><i class="fas fa-check-circle"></i> <span data-translate="aboutFeature2">Expert international chefs</span></li>
+                        <li><i class="fas fa-check-circle"></i> <span data-translate="aboutFeature3">Live entertainment 7 days a week</span></li>
+                        <li><i class="fas fa-check-circle"></i> <span data-translate="aboutFeature4">Exclusive signature dishes</span></li>
+                    </ul>
+                    <div class="about-stats">
+                        <div class="stat">
+                            <h3 class="counter" data-count="5000">0</h3>
+                            <p data-translate="stat1">Happy Customers</p>
+                        </div>
+                        <div class="stat">
+                            <h3 class="counter" data-count="150">0</h3>
+                            <p data-translate="stat2">Menu Items</p>
+                        </div>
+                        <div class="stat">
+                            <h3 class="counter" data-count="7">0</h3>
+                            <p data-translate="stat3">Days a Week</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ====== قسم المنيو ====== -->
+    <section class="menu" id="menu">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle" data-translate="menuSubtitle">Discover Our Flavors</span>
+                <h2 class="section-title" data-translate="menuTitle">Our Menu</h2>
+                <div class="title-decoration">
+                    <span class="line"></span>
+                    <i class="fas fa-utensils"></i>
+                    <span class="line"></span>
+                </div>
+            </div>
+
+            <!-- تبويبات المنيو -->
+            <div class="menu-tabs">
+                <button class="menu-tab active" data-category="signature" data-translate="menuTabSignature">
+                    <i class="fas fa-crown"></i> Signature Dishes
+                </button>
+                <button class="menu-tab" data-category="steaks" data-translate="menuTabSteaks">
+                    <i class="fas fa-fire"></i> Steaks
+                </button>
+                <button class="menu-tab" data-category="seafood" data-translate="menuTabSeafood">
+                    <i class="fas fa-fish"></i> Seafood
+                </button>
+                <button class="menu-tab" data-category="pasta" data-translate="menuTabPasta">
+                    <i class="fas fa-cheese"></i> Pasta
+                </button>
+                <button class="menu-tab" data-category="oriental" data-translate="menuTabOriental">
+                    <i class="fas fa-pepper-hot"></i> Oriental
+                </button>
+                <button class="menu-tab" data-category="drinks" data-translate="menuTabDrinks">
+                    <i class="fas fa-cocktail"></i> Drinks
+                </button>
+            </div>
+
+            <!-- عناصر المنيو -->
+            <div class="menu-grid" id="menuGrid">
+                <!-- سيتم ملؤها ديناميكيا من JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- ====== قسم التجربة الحية ====== -->
+    <section class="experience" id="experience">
+        <div class="container">
+            <div class="section-header light">
+                <span class="section-subtitle" data-translate="expSubtitle">More Than Dining</span>
+                <h2 class="section-title" data-translate="expTitle">Live Entertainment Experience</h2>
+                <div class="title-decoration">
+                    <span class="line"></span>
+                    <i class="fas fa-music"></i>
+                    <span class="line"></span>
+                </div>
+            </div>
+
+            <div class="experience-content">
+                <div class="experience-video">
+                    <div class="video-wrapper">
+                        <img src="./images/live-music.jpg" alt="Live Music" class="video-thumbnail">
+                        <button class="play-button">
+                            <i class="fas fa-play"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="experience-schedule">
+                    <h3 data-translate="expScheduleTitle">Weekly Schedule</h3>
+                    <div class="schedule-list">
+                        <div class="schedule-item">
+                            <div class="schedule-day" data-translate="monday">Monday - Tuesday</div>
+                            <div class="schedule-event" data-translate="jazzNight">Jazz & Blues Night</div>
+                            <div class="schedule-time">8:00 PM - 12:00 AM</div>
+                        </div>
+                        <div class="schedule-item">
+                            <div class="schedule-day" data-translate="wednesday">Wednesday</div>
+                            <div class="schedule-event" data-translate="rockNight">Rock Classics Night</div>
+                            <div class="schedule-time">8:00 PM - 1:00 AM</div>
+                        </div>
+                        <div class="schedule-item highlight">
+                            <div class="schedule-day" data-translate="thursday">Thursday - Friday</div>
+                            <div class="schedule-event" data-translate="specialShow">Special Performance Show</div>
+                            <div class="schedule-time">9:00 PM - 2:00 AM</div>
+                        </div>
+                        <div class="schedule-item">
+                            <div class="schedule-day" data-translate="weekend">Saturday - Sunday</div>
+                            <div class="schedule-event" data-translate="worldMusic">World Music Mix</div>
+                            <div class="schedule-time">8:00 PM - 1:00 AM</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ====== معرض الصور ====== -->
+    <section class="gallery" id="gallery">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle" data-translate="gallerySubtitle">Capture The Moments</span>
+                <h2 class="section-title" data-translate="galleryTitle">Photo Gallery</h2>
+                <div class="title-decoration">
+                    <span class="line"></span>
+                    <i class="fas fa-camera"></i>
+                    <span class="line"></span>
+                </div>
+            </div>
+
+            <div class="gallery-grid">
+                <div class="gallery-item" data-category="food">
+                    <img src="./images/gallery/dish-1.jpg" alt="Camel Steak">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="food">
+                    <img src="./images/gallery/dish-2.jpg" alt="Hot Stone Steak">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="ambiance">
+                    <img src="./images/gallery/interior-1.jpg" alt="Restaurant Interior">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="live">
+                    <img src="./images/gallery/music-1.jpg" alt="Live Performance">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="food">
+                    <img src="./images/gallery/dish-3.jpg" alt="Seafood Pasta">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="ambiance">
+                    <img src="./images/gallery/lounge-1.jpg" alt="Lounge Area">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                </div>
+          
+            <img src="images/drinks/mango-smoothie.jpg" alt="smoothie mango">>    
+                
+            </div>
+        </div>
+    </section>
+
+    <!-- ====== آراء العملاء ====== -->
+    <section class="reviews" id="reviews">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle" data-translate="reviewsSubtitle">What People Say</span>
+                <h2 class="section-title" data-translate="reviewsTitle">Customer Reviews</h2>
+                <div class="title-decoration">
+                    <span class="line"></span>
+                    <i class="fas fa-star"></i>
+                    <span class="line"></span>
+                </div>
+            </div>
+
+            <div class="reviews-slider">
+                <div class="review-card">
+                    <div class="review-stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="review-text">
+                        "Amazing experience! The camel steak was unique and delicious. The live music created such a wonderful atmosphere. Definitely coming back!"
+                    </p>
+                    <div class="review-author">
+                        <img src="./images/reviews/user-1.jpg" alt="Sarah Johnson">
+                        <div>
+                            <h4>Sarah Johnson</h4>
+                            <span>UK Tourist</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="review-card">
+                    <div class="review-stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="review-text">
+                        "The hot stone steak is a must-try! Great service, fantastic food, and the best entertainment in Hurghada. Worth every penny!"
+                    </p>
+                    <div class="review-author">
+                        <img src="./images/reviews/user-2.jpg" alt="Marco Rossi">
+                        <div>
+                            <h4>Marco Rossi</h4>
+                            <span>Italy</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="review-card">
+                    <div class="review-stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <p class="review-text">
+                        "Lovely atmosphere with excellent food quality. The pasta was authentic Italian style. The only downside was the music volume, but overall fantastic!"
+                    </p>
+                    <div class="review-author">
+                        <img src="./images/reviews/user-3.jpg" alt="Anna Petrova">
+                        <div>
+                            <h4>Anna Petrova</h4>
+                            <span>Russia</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- مؤشرات السلايدر -->
+            <div class="slider-dots" id="reviewDots"></div>
+        </div>
+    </section>
+
+    <!-- ====== قسم الحجز CTA ====== -->
+    <section class="cta-booking">
+        <div class="container">
+            <div class="cta-content">
+                <h2 data-translate="ctaTitle">Ready for an Unforgettable Evening?</h2>
+                <p data-translate="ctaText">Reserve your table now and enjoy our special welcome drink!</p>
+                <button class="btn-primary btn-large cta-btn" id="ctaBookBtn" data-translate="ctaButton">
+                    <i class="fas fa-calendar-alt"></i> Book Your Table Now
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- ====== قسم التواصل ====== -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle" data-translate="contactSubtitle">Get In Touch</span>
+                <h2 class="section-title" data-translate="contactTitle">Visit Us</h2>
+                <div class="title-decoration">
+                    <span class="line"></span>
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span class="line"></span>
+                </div>
+            </div>
+
+            <div class="contact-wrapper">
+                <div class="contact-info-cards">
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <h3 data-translate="contactLocationTitle">Location</h3>
+                        <p data-translate="contactLocationText">Hurghada City Center<br>Near Hilton Plaza<br>Hurghada, Egypt</p>
+                    </div>
+
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <h3 data-translate="contactPhoneTitle">Phone</h3>
+                        <p><a href="tel:+201067501353">+20 10 6750 1353</a></p>
+                        <p><a href="tel:+201090408853">+20 10 9040 8853</a></p>
+                    </div>
+
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <h3 data-translate="contactHoursTitle">Opening Hours</h3>
+                        <p data-translate="contactHoursText">Every Day<br>10:00 AM - 2:00 AM</p>
+                    </div>
+
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fab fa-facebook"></i>
+                        </div>
+                        <h3 data-translate="contactSocialTitle">Social Media</h3>
+                        <div class="social-links">
+                            <a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+                            <a href="#" target="_blank"><i class="fab fa-tripadvisor"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- خريطة Google -->
+                <div class="map-container">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3540.123456789!2d33.8116!3d27.2579!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjfCsDE1JzI4LjQiTiAzM8KwNDgnNDEuOCJF!5e0!3m2!1sen!2seg!4v1234567890"
+                        width="100%" 
+                        height="450" 
+                        style="border:0;" 
+                        allowfullscreen="" 
+                        loading="lazy">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ====== الفوتر ====== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>PAPA'S</h3>
+                    <p data-translate="footerAbout">Experience the finest dining and entertainment in Hurghada. Where every meal is a celebration.</p>
+                    <div class="footer-social">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-tripadvisor"></i></a>
+                        <a href="https://wa.me/201090408853"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-section">
+                    <h4 data-translate="footerQuickLinks">Quick Links</h4>
+                    <ul>
+                        <li><a href="#home" data-translate="navHome">Home</a></li>
+                        <li><a href="#about" data-translate="navAbout">About</a></li>
+                        <li><a href="#menu" data-translate="navMenu">Menu</a></li>
+                        <li><a href="#gallery" data-translate="navGallery">Gallery</a></li>
+                        <li><a href="#contact" data-translate="navContact">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4 data-translate="footerOpeningHours">Opening Hours</h4>
+                    <ul class="hours-list">
+                        <li>
+                            <span data-translate="everyday">Every Day</span>
+                            <span>10:00 - 02:00</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4 data-translate="footerNewsletter">Newsletter</h4>
+                    <p data-translate="footerNewsletterText">Subscribe for special offers and events</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Your email" required>
+                        <button type="submit"><i class="fas fa-paper-plane"></i></button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2024 PAPA'S Restaurant. <span data-translate="footerRights">All rights reserved.</span></p>
+                <p data-translate="footerDeveloped">Developed with ❤️ for exceptional dining experiences</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ====== نافذة الحجز المنبثقة ====== -->
+    <div class="modal" id="bookingModal">
+        <div class="modal-overlay" id="modalOverlay"></div>
+        <div class="modal-content">
+            <button class="modal-close" id="modalClose">
+                <i class="fas fa-times"></i>
+            </button>
+
+            <div class="modal-header">
+                <h2 data-translate="modalTitle">Reserve Your Table</h2>
+                <p data-translate="modalSubtitle">Fill in your details and we'll confirm your reservation via WhatsApp</p>
+            </div>
+
+            <form class="booking-form" id="bookingForm">
+                <!-- الخطوة 1: معلومات الحجز الأساسية -->
+                <div class="form-step active" data-step="1">
+                    <h3 data-translate="step1Title">Reservation Details</h3>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label data-translate="labelName">Full Name *</label>
+                            <input type="text" id="customerName" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label data-translate="labelPhone">Phone Number *</label>
+                            <input type="tel" id="customerPhone" required placeholder="+20 XXX XXX XXXX">
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label data-translate="labelDate">Date *</label>
+                            <input type="date" id="bookingDate" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label data-translate="labelTime">Time *</label>
+                            <select id="bookingTime" required>
+                                <option value="">Select time</option>
+                                <option value="10:00">10:00 AM</option>
+                                <option value="11:00">11:00 AM</option>
+                                <option value="12:00">12:00 PM</option>
+                                <option value="13:00">1:00 PM</option>
+                                <option value="14:00">2:00 PM</option>
+                                <option value="15:00">3:00 PM</option>
+                                <option value="16:00">4:00 PM</option>
+                                <option value="17:00">5:00 PM</option>
+                                <option value="18:00">6:00 PM</option>
+                                <option value="19:00">7:00 PM</option>
+                                <option value="20:00">8:00 PM</option>
+                                <option value="21:00">9:00 PM</option>
+                                <option value="22:00">10:00 PM</option>
+                                <option value="23:00">11:00 PM</option>
+                                <option value="00:00">12:00 AM</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label data-translate="labelGuests">Number of Guests *</label>
+                        <select id="guestCount" required>
+                            <option value="">Select number</option>
+                            <option value="1">1 Person</option>
+                            <option value="2">2 People</option>
+                            <option value="3">3 People</option>
+                            <option value="4">4 People</option>
+                            <option value="5">5 People</option>
+                            <option value="6">6 People</option>
+                            <option value="7">7 People</option>
+                            <option value="8">8 People</option>
+                            <option value="9+">9+ People (We'll call you)</option>
+                        </select>
+                    </div>
+
+                    <button type="button" class="btn-primary btn-block next-step" data-translate="btnNext">
+                        Next Step <i class="fas fa-arrow-right"></i>
+                    </button>
+                </div>
+
+                <!-- الخطوة 2: اختيار الأطباق -->
+                <div class="form-step" data-step="2">
+                    <h3 data-translate="step2Title">Pre-Order Dishes (Optional)</h3>
+                    <p class="step-subtitle" data-translate="step2Subtitle">Select dishes to speed up your service</p>
+
+                    <div class="dishes-selection" id="dishesSelection">
+                        <!-- سيتم ملؤها ديناميكيا -->
+                    </div>
+
+                    <div class="form-navigation">
+                        <button type="button" class="btn-secondary prev-step" data-translate="btnPrevious">
+                            <i class="fas fa-arrow-left"></i> Previous
+                        </button>
+                        <button type="button" class="btn-primary next-step" data-translate="btnNext">
+                            Next Step <i class="fas fa-arrow-right"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- الخطوة 3: التأكيد -->
+                <div class="form-step" data-step="3">
+                    <h3 data-translate="step3Title">Confirm Your Reservation</h3>
+                    
+                    <div class="booking-summary" id="bookingSummary">
+                        <!-- سيتم ملؤها ديناميكيا -->
+                    </div>
+
+                    <div class="form-group">
+                        <label data-translate="labelSpecialRequests">Special Requests</label>
+                        <textarea id="specialRequests" rows="3" placeholder="Allergies, special occasions, etc."></textarea>
+                    </div>
+
+                    <div class="form-checkbox">
+                        <input type="checkbox" id="agreeTerms" required>
+                        <label for="agreeTerms" data-translate="labelAgree">
+                            I agree to receive booking confirmation via WhatsApp
+                        </label>
+                    </div>
+
+                    <div class="form-navigation">
+                        <button type="button" class="btn-secondary prev-step" data-translate="btnPrevious">
+                            <i class="fas fa-arrow-left"></i> Previous
+                        </button>
+                        <button type="submit" class="btn-primary" data-translate="btnConfirmBooking">
+                            <i class="fab fa-whatsapp"></i> Confirm via WhatsApp
+                        </button>
+                    </div>
+                </div>
+            </form>
+
+            <!-- مؤشر الخطوات -->
+            <div class="steps-indicator">
+                <div class="step-dot active" data-step="1">1</div>
+                <div class="step-line"></div>
+                <div class="step-dot" data-step="2">2</div>
+                <div class="step-line"></div>
+                <div class="step-dot" data-step="3">3</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- زر واتساب عائم -->
+    <a href="https://wa.me/201090408853?text=Hello%20PAPA'S!%20I'd%20like%20to%20make%20a%20reservation" 
+       class="whatsapp-float" 
+       target="_blank"
+       aria-label="Contact us on WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- زر العودة للأعلى -->
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- Loading Screen -->
+    <div class="loading-screen" id="loadingScreen">
+        <div class="loader">
+            <div class="plate">
+                <i class="fas fa-utensils"></i>
+            </div>
+        </div>
+    </div>
+
+    <!-- ملفات JavaScript -->
+    <script src="./js/translations.js"></script>
+    <script src="./js/menu-data.js"></script>
+    <script src="./js/booking.js"></script>
+    <script src="./js/app.js"></script>
+</body>
+</html>
