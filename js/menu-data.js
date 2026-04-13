@@ -27,7 +27,7 @@ const menuData = {
             },
             price: 280,
             currency: "EGP",
-            image: "https://images.unsplash.com/photo-1558030006-450675393462?w=800&h=600&fit=crop&q=80",
+            image: "../images/Dishes/camel-steak.jpg",
             badge: "Signature",
             tags: ["gluten-free", "high-protein"],
             category: "signature",
