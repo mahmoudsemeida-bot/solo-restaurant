@@ -53,7 +53,7 @@ const menuData = {
             },
             price: 320,
             currency: "EGP",
-            image: "./images/dishes/hot-stone-steak.jpg",
+            image: "https://res.cloudinary.com/dinbygyca/image/upload/q_auto/f_auto/v1776090627/hot-stone-steak_pvsduc.jpg",
             badge: "Chef's Special",
             tags: ["interactive", "premium"],
             category: "signature",
@@ -79,7 +79,7 @@ const menuData = {
             },
             price: 350,
             currency: "EGP",
-            image: "./images/dishes/mixed-grill.jpg",
+            image: "https://res.cloudinary.com/dinbygyca/image/upload/q_auto/f_auto/v1776090702/mixed-grill_oeqxx3.jpg",
             badge: "Best Seller",
             tags: ["sharing", "variety"],
             category: "signature",
@@ -105,7 +105,7 @@ const menuData = {
             },
             price: 450,
             currency: "EGP",
-            image: "./images/dishes/seafood-platter.jpg",
+            image: "https://res.cloudinary.com/dinbygyca/image/upload/q_auto/f_auto/v1776090771/seafood-platter_mfkrbq.jpg",
             badge: "Premium",
             tags: ["seafood", "luxury"],
             category: "signature",
@@ -135,7 +135,7 @@ const menuData = {
             },
             price: 280,
             currency: "EGP",
-            image: "./images/dishes/ribeye.jpg",
+            image: "https://res.cloudinary.com/dinbygyca/image/upload/q_auto/f_auto/v1776090811/ribeye_j8hzzl.jpg",
             tags: ["beef", "premium"],
             category: "steaks"
         },
@@ -159,7 +159,7 @@ const menuData = {
             },
             price: 320,
             currency: "EGP",
-            image: "./images/dishes/tenderloin.jpg",
+            image: "https://res.cloudinary.com/dinbygyca/image/upload/q_auto/f_auto/v1776090851/tenderloin_eo4nk4.jpg",
             tags: ["beef", "tender"],
             category: "steaks"
         },
@@ -183,7 +183,7 @@ const menuData = {
             },
             price: 360,
             currency: "EGP",
-            image: "./images/dishes/tbone.jpg",
+            image: "https://res.cloudinary.com/dinbygyca/image/upload/q_auto/f_auto/v1776090892/tbone_uwcu3x.jpg",
             tags: ["beef", "large"],
             category: "steaks"
         },
@@ -207,7 +207,7 @@ const menuData = {
             },
             price: 180,
             currency: "EGP",
-            image: "./images/dishes/grilled-chicken.jpg",
+            image: "https://res.cloudinary.com/dinbygyca/image/upload/q_auto/f_auto/v1776090939/grilled-chicken_vlorem.jpg",
             tags: ["chicken", "healthy"],
             category: "steaks"
         }
@@ -235,7 +235,7 @@ const menuData = {
             },
             price: 280,
             currency: "EGP",
-            image: "./images/dishes/salmon.jpg",
+            image: "https://res.cloudinary.com/dinbygyca/image/upload/q_auto/f_auto/v1776090976/salmon_fx1wad.jpg",
             tags: ["fish", "omega-3"],
             category: "seafood",
             popular: true
@@ -260,7 +260,7 @@ const menuData = {
             },
             price: 320,
             currency: "EGP",
-            image: "./images/dishes/prawns.jpg",
+            image: "https://res.cloudinary.com/dinbygyca/image/upload/q_auto/f_auto/v1776091010/prawns_ggyc7o.jpg",
             tags: ["prawns", "grilled"],
             category: "seafood",
             popular: true
@@ -285,7 +285,7 @@ const menuData = {
             },
             price: 260,
             currency: "EGP",
-            image: "./images/dishes/seafood-pasta.jpg",
+            image: "https://res.cloudinary.com/dinbygyca/image/upload/q_auto/f_auto/v1776091054/seafood-pasta_izqxyu.jpg",
             tags: ["pasta", "seafood"],
             category: "seafood",
             popular: true
@@ -310,7 +310,7 @@ const menuData = {
             },
             price: 220,
             currency: "EGP",
-            image: "./images/dishes/calamari.jpg",
+            image: "https://res.cloudinary.com/dinbygyca/image/upload/q_auto/f_auto/v1776091103/calamari_klzkwe.jpg",
             tags: ["calamari", "appetizer"],
             category: "seafood"
         }
@@ -338,7 +338,7 @@ const menuData = {
             },
             price: 160,
             currency: "EGP",
-            image: "./images/dishes/carbonara.jpg",
+            image: "https://res.cloudinary.com/dinbygyca/image/upload/q_auto/f_auto/v1776091171/carbonara_ybx3ao.jpg",
             tags: ["pasta", "italian"],
             category: "pasta"
         },
@@ -362,7 +362,7 @@ const menuData = {
             },
             price: 140,
             currency: "EGP",
-            image: "./images/dishes/arrabbiata.jpg",
+            image: "https://res.cloudinary.com/dinbygyca/image/upload/q_auto/f_auto/v1776091214/arrabbiata_lqjoow.jpg",
             tags: ["pasta", "spicy"],
             category: "pasta"
         },
@@ -386,7 +386,7 @@ const menuData = {
             },
             price: 180,
             currency: "EGP",
-            image: "./images/dishes/alfredo.jpg",
+            image: "https://res.cloudinary.com/dinbygyca/image/upload/q_auto/f_auto/v1776091248/alfredo_za7gwc.jpg",
             tags: ["pasta", "creamy"],
             category: "pasta",
             popular: true
@@ -411,7 +411,7 @@ const menuData = {
             },
             price: 190,
             currency: "EGP",
-            image: "./images/dishes/lasagna.jpg",
+            image: "https://res.cloudinary.com/dinbygyca/image/upload/q_auto/f_auto/v1776091302/lasagna_mmpssd.jpg",
             tags: ["pasta", "baked"],
             category: "pasta"
         }
@@ -439,7 +439,7 @@ const menuData = {
             },
             price: 120,
             currency: "EGP",
-            image: "./images/dishes/mezze.jpg",
+            image: "https://res.cloudinary.com/dinbygyca/image/upload/q_auto/f_auto/v1776091356/mezze_q7gciq.jpg",
             tags: ["vegetarian", "sharing"],
             category: "oriental",
             popular: true
@@ -464,7 +464,7 @@ const menuData = {
             },
             price: 100,
             currency: "EGP",
-            image: "./images/dishes/shawarma.jpg",
+            image: "https://res.cloudinary.com/dinbygyca/image/upload/q_auto/f_auto/v1776091405/shawarma_edpqtg.jpg",
             tags: ["chicken", "popular"],
             category: "oriental"
         },
@@ -488,7 +488,7 @@ const menuData = {
             },
             price: 150,
             currency: "EGP",
-            image: "./images/dishes/kofta.jpg",
+            image: "https://res.cloudinary.com/dinbygyca/image/upload/q_auto/f_auto/v1776091445/kofta_q5t9qa.jpg",
             tags: ["lamb", "grilled"],
             category: "oriental"
         },
@@ -512,7 +512,7 @@ const menuData = {
             },
             price: 90,
             currency: "EGP",
-            image: "./images/dishes/vine-leaves.jpg",
+            image: "https://res.cloudinary.com/dinbygyca/image/upload/q_auto/f_auto/v1776091499/vine-leaves_oyaxga.jpg",
             tags: ["vegetarian", "traditional"],
             category: "oriental"
         }
