@@ -12,6 +12,7 @@ const menuData = {
                 en: "Camel Steak",
                 ar: "ستيك الجمل",
                 fr: "Steak de Chameau",
+                image: "https://images.unsplash.com/photo-1558030006-450675393462?w=800&h=600&fit=crop&q=80",
                 it: "Bistecca di Cammello",
                 ru: "Верблюжий стейк",
                 hi: "ऊंट स्टेक"
