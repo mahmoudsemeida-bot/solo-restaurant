@@ -27,7 +27,7 @@ const menuData = {
             },
             price: 280,
             currency: "EGP",
-            image: "../images/Dishes/camel-steak.jpg",
+            image: "https://res.cloudinary.com/dinbygyca/image/upload/q_auto/f_auto/v1776090213/camel-steak_vzbfkt.jpg",
             badge: "Signature",
             tags: ["gluten-free", "high-protein"],
             category: "signature",
